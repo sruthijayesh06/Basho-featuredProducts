@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
+  font-family: "Playfair Display", serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  background-color: white; 
+  background-color: #faf7f3; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.603);
+}
+
+/*subheading (where tradition meets.. line)*/
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #faf7f3;
+  color: #4b1515;
+  padding-top: 90px; 
+}
+
+.topbar h1 {
+  font-family: "Playfair Display", serif;
+  color: #371d15; 
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin: 0;
+}
+
+.menu {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  gap: 3rem;
+}
+
+.hero-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.hero-text em {
+  color: #c0603c;
+  font-style: italic;
+}
+
+.hero-desc {
+  max-width: 350px;
+  line-height:1.7;
+  color: #595350;
+}
+
+/* subdivisions(vases,all,mugs etc) */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.filters button {
+  border: burlywood;
+  background: #efe8e2;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.filters .active {
+  background: #7c4a33;
+  color: #fff;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  padding: 0 3rem 4rem;
+}
+
+/* CARD */
+.product-card {
+  background: #fff;
+  border-radius: 20px;
+  padding-bottom: 1rem;
+}
+
+.img-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.img-wrap img {
+  width: 100%;
+  display: block;
+}
+
+.price {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #f3ede7;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.category {
+  display: block;
+  margin: 1rem 1rem 0.3rem;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #9a8b85;
+}
+
+.product-card h3 {
+  margin: 0 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+/* IMAGE WRAPPER */
+.img-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.img-wrap img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+/* HOVER OVERLAY */
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* IMAGE */
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+  z-index: 1;
+}
+
+/* OVERLAY */
+.hover-info {
+  position: absolute;
+  inset: 0;
+  background: rgba(250, 247, 243, 0.95);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem;
+  text-align: center;
+
+  opacity: 0;
+  z-index: 2; /* 🔥 THIS IS THE KEY */
+  transition: opacity 0.4s ease;
+}
+
+/* TEXT */
+.hover-info p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #6b5a54;
+}
+
+/* HOVER */
+.product-card:hover .hover-info {
+  opacity: 1;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.featured-header {
+  position: relative;
+  height: 260px;
+  background: url("/src/assets/Background.png") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  position: relative;
+}
+
+.featured-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: #3a2a1f;
+  position: relative;
+  z-index: 2;
+}
+
+.featured-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #c4a484;
+  margin: 12px auto 0;
+  opacity: 0.6;
+}
+
+
